@@ -1,0 +1,33 @@
+<ng-container *ngFor="let item of product">
+
+<div class="container">
+
+            <div class="row">
+
+       <div class="col-md-4 mt-2 mb-5">
+           <img [src]="item.image" class="w-100" style="height:340px">
+       </div>
+       <div class="col-md-8 mb-5 mt-5">
+          <h5>{{item.price}} $</h5>
+          <p>{{item.title}}</p>
+          <p style="color:gray">{{item.description}}</p>
+             <div class="quantity d-flex">
+                             <div class="" style="width: 8%;">
+                             <button class="add-btn b-none w-100" (click)="increase()">+</button>
+                            </div>
+                            <div  style="width: 10%;" >
+                             <p>{{quantity}}</p>
+                            </div>
+                            <div class="" style="width: 8%;">
+                             <button class="add-btn w-100" (click)="decrease()" >-</button>
+                            </div>
+                         </div>
+          <button class="mt-5" (click)="pushIntoCart(item);pushquantity();openSnacBar()">Add to Cart</button>
+       </div>
+    </div>
+
+
+
+
+</div>
+</ng-container>

@@ -1,0 +1,35 @@
+
+.about{
+    color: white;
+button{
+    background: rgb(167, 13, 13);
+    color: white;
+    padding: 8px;
+    border:none;
+    outline:none;
+    border-radius: 2px;
+
+}
+p{color: rgb(204, 203, 203);;}
+h5{font-family: Arial;color: rgb(167, 13, 13);}
+}
+.team{
+    p,h5{color:rgb(204, 203, 203);text-align: center;margin: 5% 0;}
+}
+
+@media (max-width: 767px ){/* mobile & tablet*/
+.items{
+    margin: 0px 20%;
+}
+
+
+}
+@media (min-width: 768px) and (max-width:991px){ /* small screen */ 
+
+    
+
+}
+@media (min-width: 992px) and (max-width:1199px) { /* medium screen */
+
+
+}

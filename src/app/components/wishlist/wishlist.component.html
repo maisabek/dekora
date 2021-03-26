@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mt-5">
+            <h5>New wishlist</h5>
+        </div>
+        <div class="col-md-12 mt-2 mb-5">
+        <div class="d-flex w-100">
+            <div class="wishlist-input">
+                <input type="text" placeholder="Name" class="w-100" [(ngModel)]="wishList">
+            </div>
+            <div class="save">
+                <button class="w-100" (click)="pushWishList(wishList);wishList=''">Save</button>
+            </div>
+        </div>
+    </div>
+    <ng-container *ngIf="ProductService.wishlist.length != 0">
+    <div class="col-md-12 mb-5">
+        <table class="table p-4 mt-5">
+            <thead class="table-dark">
+                <tr>
+                <th>Name</th>
+                <th>Viewed</th>
+                <th>Created</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of ProductService.wishlist;let i=index">
+                <td>{{item}}</td>
+                <td>{{0}}</td>
+              <td>{{date | date:'short'}}</td>
+              <td><i class="fa fa-trash" aria-hidden="true" (click)="ProductService.removeWishList(i)"></i>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+    </div>
+</ng-container>
+    </div>
+</div>

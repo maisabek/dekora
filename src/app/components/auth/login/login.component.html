@@ -1,0 +1,61 @@
+<div class="login mt-4">
+    <form [formGroup]="buildForm" >
+        <div class="w-100">
+        <mat-form-field appearance="legacy">
+            <mat-label>Email <span>*</span></mat-label>
+            <input type="text" matInput  formControlName="email">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="legacy">
+            <div class="d-flex">
+                <div>
+            <mat-label>Password <span>*</span></mat-label>
+            <input [type]="show ? 'text' : 'password'" matInput formControlName="password">
+        </div>
+        <div>
+            <button mat-icon-button matSuffix (click)="show = !show " class="btn-password">
+                <mat-icon>{{show ? 'visibility_off': 'visibility'}}</mat-icon>
+            </button>
+        </div>
+        </div>
+
+        </mat-form-field>
+    </div>
+        <button class="btn-login" type="submit">login</button>
+        <a class="span-text">Forgot your password?</a>
+    </form>
+    <div class="no-account mt-4">
+        <p>NO ACCOUNT? <a>CREATE ONE HERE</a></p>
+    </div>
+    <div class="w-100">
+    <span class="span-text mb-2">Or sign in with:</span>
+    <ul class="w-75 ml-5">
+        <li>
+            <a>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a>
+                <i class="fa fa-google" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a>
+                <i class="fa fa-youtube" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a>
+                <i class="fa fa-pinterest" aria-hidden="true"></i>
+            </a>
+        </li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+</div>

@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background: black; }
+.modal-content {
+    background-color: transparent !important;
+    width: 100%;
+}
+
+.modal-dialog{
+margin: 0px;
+width: 100%;
+max-width: 100%;
+}
+.mat-step-header .mat-step-icon-selected{
+    background-color: rgb(167, 13, 13) !important;
+}
+.mat-step-icon{
+    background-color:gray
+}
+.mat-snack-bar-container {
+    top: 76px;
+    right: 40%;
+    position: absolute;
+    min-width: 18% !important;
+}

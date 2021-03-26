@@ -1,0 +1,93 @@
+// *{overflow-x: hidden;}
+
+.header{
+    background-image:linear-gradient(rgba(5, 2, 2, 0.5),rgba(0, 0, 0, 0.5)),
+     url(src/assets/images/04.webp);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 700px;
+    z-index:1;
+    .content{
+        text-align: center;
+        margin: 20% 0px;
+        font-family: 'Anton', sans-serif;
+    ngx-typed-js{font-size:20px ;}
+    button{background-color: rgb(167, 13, 13);
+        border: none;
+        outline: none;
+        padding: 10px;
+        border-radius: 3px;
+         width: 8%;
+         color: white;
+    }
+}
+}
+// end header
+.products{
+    color:rgb(26, 26, 26);
+    img{height: 200px !important;}
+    h6{text-align: center;color: white;font-size: 25px;margin: 5% 0px;}
+    h5{color:rgb(167, 13, 13);margin: 0% 5%;}
+
+    .quantity{
+        border: 1px solid rgb(226, 225, 225);
+        p{text-align: center;}
+    
+    }
+    .loadmore{color: rgb(167, 13, 13);
+        background: transparent;
+        font-size: 20px;
+         padding: 2px;
+         border: none;
+         border-bottom:2px solid rgb(167, 13, 13);
+         width: 12%;
+         margin: 4% 47%;
+         outline: none;
+    }
+    .fa-plus{font-size: 10px;}
+    p{margin: 5% 0%;color: rgb(82, 82, 82);}
+}
+.add-btn{
+    color: gray;
+    // margin: -13px -1px;
+    border: none;
+    border-top: 1px solid #d3d1d1;
+    outline: none;
+    background: white;
+    padding: 9px;
+    width: 100%;
+    // position: absolute;
+}
+a{text-decoration: none;}
+@media (max-width: 767px ){/* mobile & tablet*/
+    .products .loadmore{
+        width: 46%;
+        margin: 4% 20%
+    }
+    .header{
+     .content{
+        button{
+        width:28% !important
+    }
+    }
+    }
+    .content{
+        margin: 50% 0px;
+    }
+  
+
+}
+@media (min-width: 768px) and (max-width:991px){ /* small screen */ 
+    .products .loadmore{
+        width: 31%;
+        margin: 4% 32%
+    }
+
+}
+@media (min-width: 992px) and (max-width:1199px) { /* medium screen */
+
+
+}

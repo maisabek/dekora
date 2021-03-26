@@ -1,0 +1,32 @@
+button{
+    color:white;
+    border:none;
+    outline: none;
+    background: rgb(167, 13, 13);
+    padding:10px;
+
+}
+h5{color: rgb(167, 13, 13);}
+p{color: white;}
+.quantity p{
+    border-bottom: 1px solid rgb(167, 13, 13);
+    border-top: 1px solid rgb(167, 13, 13);
+    text-align: center;
+    padding: 9px;
+
+}
+
+@media (max-width: 767px ){/* mobile & tablet*/
+
+
+
+}
+@media (min-width: 768px) and (max-width:991px){ /* small screen */ 
+
+    
+
+}
+@media (min-width: 992px) and (max-width:1199px) { /* medium screen */
+
+
+}

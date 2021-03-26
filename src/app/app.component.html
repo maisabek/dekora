@@ -1,0 +1,141 @@
+<ng-container>
+    <mat-sidenav-container class="example-container">
+      
+        <mat-sidenav #cartside mode="over" 
+        closed class="example-sidenav justify-content-center text-center" 
+        [fixedInViewport]="true">
+        <app-cart></app-cart>
+        </mat-sidenav>
+       
+        <mat-sidenav-content>
+            <div class="navbar1" id="navbar" style="z-index:2;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-1 col-2">
+                            <a routerLink="/home">
+                            <div class="logo w-100">
+                                <img src="assets/images/01.jpg" class="w-100">
+                            </div>
+                             </a>
+                        </div>
+                        <div class="col-md-6 col-2">
+                            <ul class="display-ul">
+                                <li><a routerLink="/home" class="display-li">HOME</a></li>
+                                <li><a class="display-li" routerLink="/product">PRODUCTS</a></li>
+                                <li><a [matMenuTriggerFor]="page" class="display-li">PAGE <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </a></li>
+                                <mat-menu #page="matMenu">
+                                    <a mat-menu-item style="color:rgb(53, 53, 53) !important" routerLink="/about">
+                                        about</a>
+                                    <a mat-menu-item style="color:rgb(53, 53, 53)  !important" routerLink="/contact">
+                                        contact</a>
+                                </mat-menu>
+                            </ul>
+                            <a [matMenuTriggerFor]="hiddenlist" class="hidden-li">                        
+                                <i class="fa fa-align-left" aria-hidden="true"></i>
+                             </a>
+                        
+                            <mat-menu #hiddenlist="matMenu">
+                             <a mat-menu-item routerLink="/home" style="color:rgb(53, 53, 53) !important">HOME</a>
+                             <a mat-menu-item style="color:rgb(53, 53, 53) !important" routerLink="/product">PRODUCTS</a>
+                             <a mat-menu-item [matMenuTriggerFor]="page" style="color:rgb(53, 53, 53) !important">PAGE</a>
+                            </mat-menu>
+                           
+                        </div>
+                        <div class="col-md-4 col-8">
+                           <ul class="icon-ul"> 
+                               <li>
+                                   <a (click)="openModal(template)">
+                                       <mat-icon>search</mat-icon>
+                                   </a>
+                               </li>
+                               <li><a matBadge="{{ProductService.products.length}}" matBadgeColor="warn" (click)="cartside.toggle()">
+                                <i class="fa fa-shopping-cart"></i>
+                                </a>
+                              </li>
+                            <li>
+                                <a matBadge="{{ProductService.wishlist.length}}" matBadgeColor="warn" routerLink="/wishList">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <button mat-icon-button (click)="sidenav.toggle()">
+                                        <i class="fa fa-align-left" aria-hidden="true"></i>
+                
+                                      </button>
+                                </a>
+                            </li>
+                          
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+                </div> <!-- end navbar -->
+            <router-outlet></router-outlet>
+            <app-footer></app-footer>
+        </mat-sidenav-content>
+        
+      </mat-sidenav-container>
+
+    <mat-sidenav-container class="example-container">
+      <mat-sidenav #sidenav mode="over" 
+      closed class="example-sidenav justify-content-center text-center"
+                   [fixedInViewport]="true">
+                   <app-login></app-login>
+      </mat-sidenav>
+      <mat-sidenav-content>
+    
+      </mat-sidenav-content>
+      
+    </mat-sidenav-container>
+  
+</ng-container>
+
+<ng-template #template>
+    <div class="modal-header">
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="d-flex w-100">
+          <div class="w-25 categories">
+              
+            <select class="w-100">
+                <option value="">  all categories</option>
+                <option *ngFor="let item of categories" value="{{item}}">{{item}}</option>
+            </select>
+          </div>
+          <div class="d-flex w-75">
+              <div class="search-input">
+            <input type="text" 
+            placeholder="Enter Product" [(ngModel)]="searchItem" name="searchItem" class="w-100">
+         
+                </div>
+                <div class="search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+          </div>
+      </div>
+    </div>
+  
+    <div class="col-md-5 mt-2 col-7 card" style="margin-left: 30%;" *ngFor="let item of product|filterData:searchItem;let i=index">
+        <a routerLink="/detail/{{item.id}}" (click)="closeModal()">
+        <div class="w-100 d-flex h-25">
+            <div class="w-25 ">
+                <img [src]="item.image" class="w-100 p-3" style="height: 120px;">
+                </div>
+                <div class="w-75 mt-4">
+                <h5>{{item.price}} $</h5>
+                 <p class="p-3">{{item.title}}</p>
+                </div>
+                 <!-- <button class="add-btn">View Details</button> -->
+                 <!-- <button class="add-btn">Add To Cart</button> -->
+        </div>
+    </a>
+    </div>
+
+
+  </ng-template>
+

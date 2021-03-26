@@ -1,0 +1,34 @@
+<div class="mt-2">
+<h6>YOUR CART</h6>
+
+<div class="card col-md-12 mt-3" *ngFor="let item of ProductService.products;let i=index">
+    <div >
+        <i class="fa fa-times" aria-hidden="true" 
+        (click)="ProductService.totalPrice=ProductService.totalPrice - item.price * ProductService.quantity[i];removeFromCart(i)"></i>
+    </div>
+    <div class="d-flex w-100 p-2">
+      <div class="w-25">
+        <img [src]="item.image" class="w-100" style="height:120px">
+      </div>
+      <div class="w-75">
+          <h5>{{item.price}} $</h5>
+          <ng-container *ngIf="ProductService.quantity[i]">
+          <p style="color: rgb(167, 13, 13);">{{ProductService.quantity[i]}} <span>piece</span>
+            </p>
+        </ng-container>
+          <p>{{item.title}}</p>
+      </div>
+    </div>
+</div>
+<div class="col-md-12 col-12 mt-5 p-4">
+  <ng-container *ngIf="ProductService.products.length != 0">
+  Total Price :{{ProductService.totalPrice}} $
+  <br>
+</ng-container>
+<ng-container *ngIf="ProductService.products.length == 0">
+  Total Price : 0 $
+</ng-container>
+<br>
+<button routerLink="/checkOut" class="mt-2 w-50">checkOut</button>
+</div>
+</div>

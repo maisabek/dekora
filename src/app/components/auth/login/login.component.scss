@@ -1,0 +1,59 @@
+.btn-login{
+    border: 1px solid rgb(167, 13, 13);
+    outline: none;
+    background:white; 
+    color: rgb(167, 13, 13);
+    padding: 5px;
+    width:85%;
+    margin: 6%;
+    border-radius: 3px;
+}
+.btn-password{
+    border: none;
+    outline: none;
+    color:gray; 
+    background:transparent;
+
+}
+mat-form-field{
+width: 85%;
+color: gray;
+}
+span{
+    color: rgb(167, 13, 13);
+}
+
+.span-text{color: gray;font-family: 'Anton';text-decoration: none;cursor: pointer;}
+.no-account{
+background: rgb(236, 234, 234);font-family: 'Arial';
+p{padding: 23px;font-size: 12px;}
+a{text-decoration: none;
+    color: rgb(167, 13, 13);
+    cursor: pointer;
+}
+}
+ul {
+    margin: 0 15%;
+li{
+    float: left;
+    list-style-type: none;
+    margin: 4%;
+}
+a{cursor: pointer;}
+}
+.fa{font-size: 20px;}
+
+@media (max-width: 767px ){/* mobile & tablet*/
+
+
+
+}
+@media (min-width: 768px) and (max-width:991px){ /* small screen */ 
+
+    
+
+}
+@media (min-width: 992px) and (max-width:1199px) { /* medium screen */
+
+
+}

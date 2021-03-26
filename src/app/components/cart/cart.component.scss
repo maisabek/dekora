@@ -1,0 +1,31 @@
+h6,h5{
+    color: rgb(167, 13, 13);
+}
+.fa-times{
+cursor: pointer;
+margin: 2px -47%;
+position: absolute;
+}
+button{
+    background: rgb(167, 13, 13);
+    color: white;
+    padding: 8px;
+    border:none;
+    outline:none;
+    border-radius: 2px;
+
+}
+@media (max-width: 767px ){/* mobile & tablet*/
+
+
+
+}
+@media (min-width: 768px) and (max-width:991px){ /* small screen */ 
+
+    
+
+}
+@media (min-width: 992px) and (max-width:1199px) { /* medium screen */
+
+
+}
