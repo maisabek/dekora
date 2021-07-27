@@ -48,7 +48,9 @@
                            <ul class="icon-ul"> 
                                <li>
                                    <a (click)="openModal(template)">
-                                       <mat-icon>search</mat-icon>
+                                       <!-- <mat-icon>search</mat-icon> -->
+                                       <i class="fa fa-search" aria-hidden="true"></i>
+
                                    </a>
                                </li>
                                <li><a matBadge="{{ProductService.products.length}}" matBadgeColor="warn" (click)="cartside.toggle()">

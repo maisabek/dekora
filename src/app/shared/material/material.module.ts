@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import {MatButtonModule} from '@angular/material/button'
 import {MatToolbarModule} from '@angular/material/toolbar'
+// import {MatIconModule} from '@angular/material/Icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatBadgeModule} from '@angular/material/badge';
@@ -21,6 +22,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 const materialComponents=[
   MatButtonModule,
   MatToolbarModule,
+  // MatIconModule,
   MatSidenavModule,
   MatMenuModule,
   MatBadgeModule,
