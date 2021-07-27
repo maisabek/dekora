@@ -30,8 +30,9 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { ProductsComponent } from './components/products/products.component';
-
-
+import { NgwWowModule } from 'ngx-wow';
+import { CounterModule } from 'ngx-counter';
+import { CountUpModule } from 'ngx-countup';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,11 +62,15 @@ import { ProductsComponent } from './components/products/products.component';
  
     ReactiveFormsModule,
     FormsModule,
+    CountUpModule,
 
     PopoverModule.forRoot(),
     ModalModule.forRoot(),
     
-    MaterialModule
+    MaterialModule,
+    NgwWowModule,
+    CounterModule.forRoot()
+
 
   ],
   providers: [],

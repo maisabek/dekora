@@ -6,7 +6,7 @@
         <i class="fa fa-times" aria-hidden="true" 
         (click)="ProductService.totalPrice=ProductService.totalPrice - item.price * ProductService.quantity[i];removeFromCart(i)"></i>
     </div>
-    <div class="d-flex w-100 p-2">
+    <div class="d-flex w-100 p-2 mt-4">
       <div class="w-25">
         <img [src]="item.image" class="w-100" style="height:120px">
       </div>

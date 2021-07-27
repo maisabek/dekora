@@ -1,7 +1,7 @@
 .navbar1{
-background:url(src/assets/images/03.png);
+background:rgb(2, 4, 15);
 color:white;
-padding:21px;
+padding:9px;
 z-index: 4;
 ul li{
     float:left;
@@ -133,25 +133,44 @@ p{color: rgb(105, 104, 104);font-family: 'Anton';}
     display: none;
 }
 a{font-weight: lighter;}
+
+.fa-times{
+    font-size: 33px;
+     color:rgb(2, 4, 15);
+    float: right;
+    margin-right: 12%;
+    margin-top: 24px;
+    margin-bottom: 20px;
+
+    cursor: pointer;
+}
 @media (max-width: 767px ){/* mobile & tablet*/
+    .navbar1{
+        padding:24px;
+    }
 .hidden-li{
     display: block;
 }
 .display-ul{display: none;}
 .example-sidenav{
-    width: 65%;
+    width: 86%;
 }
 .categories{
     width: 41%!important;
 }
 .icon-ul{margin: -16px -18% !important}
-
+.card{
+    margin-left: 5% !important;
+}
+.categories{width: 38% !important;}
+.search-box{width: 62% !important;}
 }
 @media (min-width: 768px) and (max-width:991px){ /* small screen */ 
     .hidden-li{
         display: block;
     }
     .display-ul{display: none;}
+    
     
     
 

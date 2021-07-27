@@ -21,8 +21,8 @@
     input,textarea{
       border: 1px solid gray;
       outline: none;
-      background: black !important;
       padding: 10px;
+      background: transparent;
       color: white;
     }
     // ::placeholder{color: white;}
@@ -37,7 +37,7 @@
 
 
 @media (max-width: 767px ){/* mobile & tablet*/
-
+.map{padding:1px !important}
 
 
 }

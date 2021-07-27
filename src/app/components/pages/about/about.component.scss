@@ -10,11 +10,11 @@ button{
     border-radius: 2px;
 
 }
-p{color: rgb(204, 203, 203);;}
+p{color: rgb(204, 203, 203);font-family: cursive;}
 h5{font-family: Arial;color: rgb(167, 13, 13);}
 }
 .team{
-    p,h5{color:rgb(204, 203, 203);text-align: center;margin: 5% 0;}
+    p,h5{color:rgb(204, 203, 203);text-align: center;margin: 5% 0;font-family: cursive;}
 }
 
 @media (max-width: 767px ){/* mobile & tablet*/

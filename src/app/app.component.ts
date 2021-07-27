@@ -3,6 +3,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import {ProductService} from '../app/services/product.service'
 import {MatDialog} from '@angular/material/dialog'
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,6 +21,9 @@ export class AppComponent implements OnInit{
   ngOnInit(){
     this.getProduct()
     console.log("pro",this.product)
+  }
+  closeDialog(){
+    this.MatDailog.closeAll()
   }
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);

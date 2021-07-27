@@ -1,4 +1,4 @@
-<mat-horizontal-stepper [linear]="true" #stepper class="mb-5 mt-5 p-5">
+<mat-vertical-stepper  #stepper class="stepper mb-5 mt-5 p-5">
     <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
           <ng-template matStepLabel>Personal Information</ng-template>
@@ -22,10 +22,10 @@
             <input matInput type="text" placeholder="MM/DD/YYYY"  formControlName="Birthdate" required>
           </mat-form-field>
           <br>
-           <input type="checkbox" formControlName="privacy"> I agree to the terms and conditions and the privacy policy
-
+         <p class="privacy"><input type="checkbox" formControlName="privacy"> I agree to the terms and conditions and the privacy policy
+         </p>
           <div>
-            <button mat-button matStepperNext class="mt-2">continue</button>
+            <button mat-button matStepperNext class="stepper-btn mt-2">continue</button>
           </div>
         </form>
       </mat-step>
@@ -38,8 +38,8 @@
                    required></textarea>
           </mat-form-field>
           <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext class="ml-3">Continue</button>
+            <button mat-button matStepperPrevious class="stepper-btn">Back</button>
+            <button mat-button matStepperNext class="stepper-btn ml-3">Continue</button>
           </div>
         </form>
       </mat-step>
@@ -52,13 +52,12 @@
               <br>
             <select [(ngModel)]="selectedPaymentMethod" name="payment_method"
                formControlName="payment_method" class="border mb-5" required>
-                <option>select</option>
                 <option *ngFor="let payment of paymentMethods" [value]="payment">{{payment}}</option>
               </select>
           <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button (click)="stepper.reset()" class="ml-3">order</button>
+            <button mat-button matStepperPrevious class="stepper-btn">Back</button>
+            <button mat-button class="stepper-btn ml-3">order</button>
         </div>
         </form>
       </mat-step>
-</mat-horizontal-stepper>
+    </mat-vertical-stepper>

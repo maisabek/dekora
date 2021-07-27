@@ -1,6 +1,7 @@
 .footer{
-    background: url(src/assets/images/03.png);
+    background: rgb(2, 5, 17);
     color:gray;
+    border-bottom: 1px dotted white;
     .content{
         text-align: center;
         margin: 5% 0px;
@@ -10,32 +11,47 @@
             font-family: 'Anton', sans-serif;
         }
         input[type="text"],button{
-            border: none;
+            // border: 1px solid white;
             outline: none;
-            padding: 18px;
+            border: none;
+            padding: 14px;
             color: rgb(167, 13, 13);
-            background: black;
+            margin-bottom: 20px;
+            background: rgb(4, 8, 32);
+            border-radius: 2px;
         
         }
+        button{background:rgb(2, 5, 26) ;}
+        ::placeholder{color: white;font-family: Arial, Helvetica, sans-serif;}
+     
         .subscribe{margin: 0 27%;width: 50%;}
 
     }
-    ul{
-        margin: 0 69%;
-        width: 25%;
-         li{
-        float: left;
-        list-style-type: none;
-        color: white;
-        margin: 0 5%;
-    }}
-    .clearfix{
-        clear: both;
-    }
+  
     .subscribe-btn{
         width: 36% !important;
     }   
 
+}
+.footer2{
+    background: rgb(2, 6, 20);
+    ul{
+        margin: 4% 0;
+        margin-left: 30%;
+         li{
+        float: left;
+        list-style-type: none;
+        color: white;
+        margin: 0  3%;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+    }}
+    .clearfix{
+        clear: both;
+    }
+}
+.footer2 ul li:hover{
+    color: rgb(7, 33, 128);
 }
 @media (max-width: 767px ){/* mobile & tablet*/
     .footer .content .subscribe{
@@ -43,13 +59,10 @@
         width: 95%;
     }
     .footer .subscribe-btn{
-        width: 77% !important;
+        width: 55% !important;
     }
-    .footer ul{
-        margin: 0 7%;
-        width: 68%;
-
-    }
+    .footer h5{margin-top:9%}
+   
 
 
 }

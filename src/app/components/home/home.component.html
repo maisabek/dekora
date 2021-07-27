@@ -8,7 +8,7 @@
      [typeSpeed]="40" [loop]="true">
         <span class="typing"></span>
       </ngx-typed-js>
-      <button class="mt-2"><a routerLink="/product" style="color: white;">shop now</a></button>
+      <button class="wow fadeInDownBig mt-2" data-wow-duration="2s"><a routerLink="/product" style="color: white;">shop now</a></button>
     </div>
 </div></div>
 </div>
@@ -16,20 +16,20 @@
 <!-- end header -->
 
 <!-- start display product -->
-<div class="products">
+<div class="products mt-5">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h6>NEW ARRIVALS
-                </h6>  
+                <h5 class="wow bounce" data-wow-duration="1s" style="font-family: cursive;">NEW ARRIVALS
+                </h5>  
             </div>
-            <div class="col-sm-6 col-md-6 col-lg-3  mb-5" *ngFor="let item of product">
+            <div class="wow flash col-sm-6 col-md-6 col-lg-3  mb-4 mt-5" data-wow-duration="2s" *ngFor="let item of product">
                 <a routerLink="/detail/{{item.id}}">
                 <div class=" h-100 p-2" style="background: white;">
                     <div class="w-100">
                         <img [src]="item.image" class="w-100 p-3">
                         </div>
-                        <h5>{{item.price}} $</h5>
+                        <h4>{{item.price}} $</h4>
                          <p class="p-3">{{item.title}}</p>
                       
                 </div>
@@ -54,15 +54,68 @@
             <button class="loadmore" (click)="loadMore()">Load More <i class="fa fa-plus" aria-hidden="true"></i>
             </button>
         </ng-container>
-        <div class="col-md-12 card" style="height: 400px;margin: 7% 0;">
-            <div class="w-100 h-100 p-4">
-                <iframe class="w-100 h-100"
-                    src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3456.6419301838555!2d30.923223!3d29.9609765!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1573909576260!5m2!1sar!2seg"
-                    frameborder="0" style="border:0" allowfullscreen="">
-                </iframe>
-            </div>
-        </div>
+       
         </div>
     </div>
 </div>
 
+<div class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="wow fadeInLeft col-md-5" data-wow-duration="3s">
+            <img src="assets/images/10.png" class="w-100" alt="">
+            </div>
+            <div class="col-md-6 mt-5">
+                <h5 class="wow bounce" data-wow-duration="2s" style="color: rgb(167, 13, 13);font-family: cursive;">about us</h5>
+               <p style="color: white;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede</p>
+               <a routerLink="/about">
+               <button class="btn">show more</button>
+               </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div  class="mt-5" style="margin-bottom:10%">
+    <div class="container">
+        <div class="insights-card d-flex h-75 mt-5">
+            <div class="w-50 mt-5">
+                <div class="content h-100" style="background:white;padding: 30px;border-radius: 5px;">
+                <h5 class="wow bounce" data-wow-duration="2s" style="text-align: center;font-size: 22px;font-family: cursive;color: rgb(167, 13, 13);margin: 5% 0px;">Get insights</h5>
+                <p style="color: rgb(105, 105, 105);font-size: 17px;margin-left: 8%;">
+                    Discover the benefits of data analytics and make better decisions regarding revenue, customer experience</p>
+                 <div class="insights">
+                     <div style="width: 30%;margin-left:10%">
+                        <!-- [countUp]="20" [options]="myOpts" -->
+                        <ngx-counter [countValue]=1 [speed]="200" [limit]=50 font="cursive" theme="red"></ngx-counter>
+                        <!-- <span   style="font-size: 25px;color: rgb(167, 13, 13)">50</span> -->
+                        <span style="font-size: 25px;color: rgb(167, 13, 13);margin: 0 1%;">K+</span>
+                        <br> 
+                         <span style="color: rgb(105, 105, 105);">COMPANIES</span>
+                     </div>
+                     <div style="width: 30%;">
+                        <ngx-counter [countValue]=1 [speed]="1000" [limit]=10 font="cursive" theme="red"></ngx-counter>
+                        <br>
+                        <span style="color: rgb(105, 105, 105);">TEMPLATES</span>
+                    </div>
+                    <div style="width: 30%;">
+                      
+                        <ngx-counter [countValue]=1 [speed]="100" [limit]=90 font="cursive" theme="red"></ngx-counter>
+
+                        <span style="font-size: 25px;color: rgb(167, 13, 13);margin: 0 1%;">M+</span>
+                        <br>
+                        <span style="color: rgb(105, 105, 105);">QUERIES</span>
+                    </div>
+                 </div>
+            </div>
+                </div>
+            <div class="w-50 mt-5" style="position: relative;">
+                <img src="assets/images/11.jpg" class="w-100 h-100" alt="">
+                <div class="overlay" style="width: 100%;top: 0;position: absolute;left: 0;background: rgba(12, 12, 46, 0.5);height: 100%;"></div>
+            </div>
+           
+        </div>
+    </div>
+</div>

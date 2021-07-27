@@ -1,8 +1,8 @@
 // *{overflow-x: hidden;}
 
 .header{
-    background-image:linear-gradient(rgba(5, 2, 2, 0.5),rgba(0, 0, 0, 0.5)),
-     url(src/assets/images/04.webp);
+    background-image:linear-gradient(rgba(16, 16, 37, 0.5),rgba(16, 16, 37, 0.5)),
+     url(src/assets/images/41.jpg);
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,7 +15,8 @@
         margin: 20% 0px;
         font-family: 'Anton', sans-serif;
     ngx-typed-js{font-size:20px ;}
-    button{background-color: rgb(167, 13, 13);
+    button{
+        background-color: rgb(167, 13, 13);
         border: none;
         outline: none;
         padding: 10px;
@@ -29,8 +30,8 @@
 .products{
     color:rgb(26, 26, 26);
     img{height: 200px !important;}
-    h6{text-align: center;color: white;font-size: 25px;margin: 5% 0px;}
-    h5{color:rgb(167, 13, 13);margin: 0% 5%;}
+    h5{text-align: center;color: white;font-size: 20px;margin: 5% 0px;}
+    h4{color:rgb(167, 13, 13);margin: 0% 5%;}
 
     .quantity{
         border: 1px solid rgb(226, 225, 225);
@@ -62,10 +63,19 @@
     // position: absolute;
 }
 a{text-decoration: none;}
+.btn{
+    background-color: rgb(167, 13, 13);
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 3px;
+     color: white;
+}
+.insights{display: flex;margin: 10% 5%;}
 @media (max-width: 767px ){/* mobile & tablet*/
     .products .loadmore{
         width: 46%;
-        margin: 4% 20%
+        margin: 15% 20%
     }
     .header{
      .content{
@@ -74,20 +84,47 @@ a{text-decoration: none;}
     }
     }
     }
-    .content{
-        margin: 50% 0px;
-    }
+    .header .content{
+    margin: 50% 0;
+}
   
-
+.map{
+    padding: 1px !important;
+}
+.insights{flex-wrap: wrap !important;}
+.content{padding: 10px !important;}
+.insights div{
+    width: 100% !important;
+    margin-left: 10% !important;
+    margin-top: 6%;
+}
+.insights-card{flex-wrap:wrap}
+.insights-card div{width: 100% !important;}
+.insights-card > div:nth-of-type(2){margin-bottom: 29px !important;margin-top: 18px !important;min-height: 500px;}
 }
 @media (min-width: 768px) and (max-width:991px){ /* small screen */ 
     .products .loadmore{
         width: 31%;
-        margin: 4% 32%
+        margin: 6% 32%
     }
-
+    .header{
+        .content{
+           button{        
+        width: 18%;
+    }}}
+    .insights{flex-wrap: wrap !important;}
+.content{padding: 10px !important;}
+.insights div{
+    width: 100% !important;
+    margin-left: 10% !important;
+    margin-top: 6%;
+}
 }
 @media (min-width: 992px) and (max-width:1199px) { /* medium screen */
-
+    .header{
+        .content{
+           button{        
+        width: 18%;
+    }}}
 
 }

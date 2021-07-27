@@ -1,7 +1,7 @@
 <div class="mt-5 mb-5">
 <div class="container">
     <div class="row">
-        <div class="col-sm-5 col-md-4 col-lg-3 mt-4">  
+        <div class="col-sm-5 col-md-4 col-lg-4 mt-4">  
             <div class="categories">
                 <h5 class="ml-3 mb-4">All Categories</h5>
                 <ul>
@@ -12,13 +12,15 @@
                 </ul>
             </div> 
         </div>
-        <div class="col-sm-7 col-md-8 col-lg-9">
+        <div class="col-sm-7 col-md-8 col-lg-8">
             <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let item of category;let i=index">
+        <div class="col-sm-12 col-md-6 col-lg-6" *ngFor="let item of category;let i=index">
             <a routerLink="/detail/{{item.id}}">
-            <div style="background: white;height: 85%;" class="p-4 mt-4">
-            <img [src]="item.image" class="w-100" style="height: 290px;">
-            <h5 style="color: rgb(167, 13, 13);">{{item.price}} $</h5>
+            <div style="background: white;height: 85%;border-radius: 5px;" class="p-4 mt-4">
+                <div style="height: 250px;">
+            <img [src]="item.image" class="w-100 h-100" >
+            </div>
+            <h5 style="color: rgb(167, 13, 13);margin-top: 8%;">{{item.price}} $</h5>
             <p>{{item.title}}</p>
         </div>
     </a>

@@ -4,6 +4,8 @@
         <mat-sidenav #cartside mode="over" 
         closed class="example-sidenav justify-content-center text-center" 
         [fixedInViewport]="true">
+        <i class="fa fa-times" aria-hidden="true" (click)="cartside.toggle()"></i>
+                   <div class="clearfix"></div> 
         <app-cart></app-cart>
         </mat-sidenav>
        
@@ -13,7 +15,7 @@
                     <div class="row">
                         <div class="col-md-1 col-2">
                             <a routerLink="/home">
-                            <div class="logo w-100">
+                            <div class="logo w-100" style="margin: 6% 0px;">
                                 <img src="assets/images/01.jpg" class="w-100">
                             </div>
                              </a>
@@ -82,6 +84,8 @@
       <mat-sidenav #sidenav mode="over" 
       closed class="example-sidenav justify-content-center text-center"
                    [fixedInViewport]="true">
+                   <i class="fa fa-times" aria-hidden="true" (click)="sidenav.toggle()"></i>
+                   <div class="clearfix"></div>        
                    <app-login></app-login>
       </mat-sidenav>
       <mat-sidenav-content>
@@ -103,11 +107,11 @@
           <div class="w-25 categories">
               
             <select class="w-100">
-                <option value="">  all categories</option>
+                <option value="">Categories</option>
                 <option *ngFor="let item of categories" value="{{item}}">{{item}}</option>
             </select>
           </div>
-          <div class="d-flex w-75">
+          <div class="search-box d-flex w-75">
               <div class="search-input">
             <input type="text" 
             placeholder="Enter Product" [(ngModel)]="searchItem" name="searchItem" class="w-100">
@@ -120,7 +124,7 @@
       </div>
     </div>
   
-    <div class="col-md-5 mt-2 col-7 card" style="margin-left: 30%;" *ngFor="let item of product|filterData:searchItem;let i=index">
+    <div class="col-11 col-md-5 mt-2 col-7 card" style="margin-left: 30%;" *ngFor="let item of product|filterData:searchItem;let i=index">
         <a routerLink="/detail/{{item.id}}" (click)="closeModal()">
         <div class="w-100 d-flex h-25">
             <div class="w-25 ">

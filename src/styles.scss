@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background: black; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background: rgb(4, 7, 27);}
 .modal-content {
     background-color: transparent !important;
     width: 100%;
@@ -20,7 +20,8 @@ max-width: 100%;
 }
 .mat-snack-bar-container {
     top: 76px;
-    right: 40%;
+    right: 0%;
     position: absolute;
     min-width: 18% !important;
+    text-align: center !important;
 }

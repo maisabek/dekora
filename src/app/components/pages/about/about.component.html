@@ -1,18 +1,18 @@
 <div class="about mt-5 mb-5">
 <div class="container">
     <div class="row">
-        <div class="col-md-5" style="height: 400px;">
-         <img src="assets/images/02.jpg" class="w-100 h-100" alt="">
+        <div class=" wow fadeInLeft col-md-5" data-wow-duration="2s" style="height: 400px;">
+         <img src="assets/images/42.jpg" class="w-100 h-100" alt="">
         </div>
         <div class="col-md-7 mt-2">
-            <p style="color: white;">About us</p>
+            <p class="wow bounce" data-wow-duration="2s" style="color: white;">About us</p>
             <h5>WHY CHOOSE OUR?</h5>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
                 <br><br>
                 Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
                 <br><br>
                 Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-        <button>Learn More</button>
+        <button class="wow fadeInDownBig" data-wow-duration="2s">Learn More</button>
        </div>
     </div>
 </div>
@@ -22,13 +22,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h5 class="team-h5">OUR TEAM
+                <h5 class="wow tada team-h5" data-wow-duration="2s">OUR TEAM
                 </h5>
             </div>
             <div class="col-md-3 col-11" *ngFor="let item of teams">
                 <div class="items">
                 <div class="w-100" style="height: 250px;">
-                <img [src]="item.image" alt="" class="w-100 h-100" style="border-radius: 50%;">
+                <img [src]="item.image" alt="" class="w-100 h-100" style="border-radius: 5px;">
                    </div>
                 <h5>{{item.name}}</h5>
                 <p>{{item.role}}</p>

@@ -2,6 +2,7 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProductService } from 'src/app/services/product.service';
+import { NgwWowService } from 'ngx-wow';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,9 @@ import { ProductService } from 'src/app/services/product.service';
 export class HomeComponent implements OnInit {
    
   constructor(private productService:ProductService,private MatDailog:MatDialog,
-    private snackbar:MatSnackBar) {}
+    private snackbar:MatSnackBar,private wowService: NgwWowService) {
+        this.wowService.init();
+    }
 
   ngOnInit() {
     this.NumOfItem = 4
@@ -43,7 +46,7 @@ export class HomeComponent implements OnInit {
   this.productService.totalPrice+=product.price * this.quantity
   }
   openSnacBar(){
-    this.snackbar.open('check cart product added successfully','',{duration:2000})
+    this.snackbar.open('check cart product added successfully','',{duration:3000})
   }
   openDialog(templateRef:TemplateRef<any>){
     this.MatDailog.open(templateRef)
@@ -54,5 +57,28 @@ export class HomeComponent implements OnInit {
    pushquantity(quantity){
     this.productService.pushQuantity(quantity)
    }
- 
+   myOpts={
+    duration: 100, // animation duration in seconds (2)
+    useGrouping: true, // example: 1,000 vs 1000 (true)
+    // useEasing: true, // ease animation (true)
+    // smartEasingThreshold: 1000, // smooth easing for large numbers above this if useEasing (999)
+    // smartEasingAmount: 1000 // amount to be eased for numbers above threshold (333)
+  
+   }
+   myOpts2={
+    duration: 100, // animation duration in seconds (2)
+    useGrouping: true, // example: 1,000 vs 1000 (true)
+    // useEasing: true, // ease animation (true)
+    // smartEasingThreshold: 1000, // smooth easing for large numbers above this if useEasing (999)
+    // smartEasingAmount: 1000 // amount to be eased for numbers above threshold (333)
+  
+   }
+   myOpts3={
+    duration: 500, // animation duration in seconds (2)
+    useGrouping: true, // example: 1,000 vs 1000 (true)
+    // useEasing: true, // ease animation (true)
+    // smartEasingThreshold: 1000, // smooth easing for large numbers above this if useEasing (999)
+    // smartEasingAmount: 1000 // amount to be eased for numbers above threshold (333)
+  
+   }
 }
